@@ -1,4 +1,4 @@
-# crud_cplusplus_txt
+# BASIC CRUD C++ with text manifulation
 Basic CRUD c++
 Ini adalah aplikasi dasar penggunaan struct dan algoritam crud dic++.
 Referensi : https://bundet.com/pub/detail/operasi-file-c-write-read-search-delete-update-1539274802
