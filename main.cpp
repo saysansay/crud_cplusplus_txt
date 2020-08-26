@@ -30,14 +30,10 @@ char namaFile[30] = "database.dat";
 char tempnamaFile[30] = "tempdatabase.dat";
 modelBarang dtBarang;
 
-void ubah(modelBarang dtBarang)
-{
-		
-        
-}
+
 void create(int n){
     ofstream fo; 
-    modelBarang dtBarang;
+    
     cout << "JUMLAH DATA YANG AKAN DIINPUT: ";
     cin >> n;
     fo.open(namaFile, ios::binary | ios::app);
@@ -46,10 +42,14 @@ void create(int n){
         cout << "\nBARANG " << i;
         cout << "\nKODE BARANG : ";
         cin >> dtBarang.kodebarang;
+        
         cout << "NAMA BARANG: ";
+        
         cin >> dtBarang.namabarang;
+        
         cout << "UNIT BARANG: ";
         cin >> dtBarang.unitbarang;
+        
         fo.write((char *) &dtBarang, sizeof(dtBarang)); 
     }
     fo.close();
@@ -187,30 +187,33 @@ cout<<"MENU UTAMA"<<endl;
  	cout<<"5. UBAH"<<endl;
  	cout<<"6. KELUAR"<<endl;
  	cout<<"==================================="<<endl;
-do {	
-	switch (menu){
-	case 1:
-	   create(data);
-	   break;
-	case 2:
-	   read();
-	   break;
-	case 3:
-	   search(searchKodebarang);
-	   break;
-	case 4:
-	   del(searchKodebarang);
-	   break;
-	case 5:
-	   edit(searchKodebarang);
-	   break;
-	case 6 : exit(0);
-	}
-    cout<<"\nPILIHAN MENU : ";cin>>menu;
-    repeatMenu(menu,data,isexit,searchKodebarang);
-}while (isexit=='Y');
+ 	cout<<"INPUTAN DATA TIDAK BOLEH ADA SPASI KARENA TYPE DATA CHAR"<<endl;
+ 	cout<<"ON TASK : UPDATE SORTING"<<endl;
 
-getch();
+do {
+switch (menu){
+case 1:
+   create(data);
+   break;
+case 2:
+   read();
+   break;
+case 3:
+   search(searchKodebarang);
+   break;
+case 4:
+   del(searchKodebarang);
+   break;
+case 5:
+   edit(searchKodebarang);
+   break;
+case 6:
+   exit(0);
+}	
+
+cout<<"\nPILIHAN MENU : ";cin>>menu;
+repeatMenu(menu,data,isexit,searchKodebarang);
+}while (isexit=='Y');//looping forever wkwkwkwkw
 }
 int main(int argc, char** argv) {
 	int menu;
