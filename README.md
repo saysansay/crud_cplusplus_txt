@@ -8,3 +8,4 @@ Referensi : https://bundet.com/pub/detail/operasi-file-c-write-read-search-delet
 Task : 
 Update Procedure 
 Sorting Procedure
+Allow Space Input in Char Type Data
